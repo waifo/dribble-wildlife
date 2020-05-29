@@ -1,16 +1,22 @@
 import React, { useCallback, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 
-import { Colors, Bubble } from "../common";
+import { Colors, Bubble, mediaQuery } from "../common";
 
 const SectionContainer = styled.div`
-  margin: 50px;
   padding: 50px 100px 100px 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
   background-color: ${Colors.BRIGHT_GREEN};
   color: ${Colors.GREEN_WHITE};
+  ${mediaQuery.mblAndTab(css`
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+    margin: 0px;
+    grid-gap: 0px;
+  `)}
 `;
 
 const ContentContainer = styled.div`
@@ -20,11 +26,29 @@ const ContentContainer = styled.div`
     font-size: 42px;
     color: ${Colors.WHITE};
   }
+  ${mediaQuery.mobile(css`
+    font-size: 22px;
+    line-height: 40px;
+    span {
+      font-size: 28px;
+    }
+  `)}
+  ${mediaQuery.tablet(css`
+    font-size: 28px;
+    line-height: 50px;
+    span {
+      font-size: 36px;
+    }
+  `)}
 `;
 const CounterContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-gap: 50px;
+  ${mediaQuery.mblAndTab(css`
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  `)}
 `;
 
 const ToursCounter = styled.div``;
@@ -36,6 +60,12 @@ const Counter = styled.div`
   color: ${Colors.WHITE};
   margin-bottom: 20px;
   ${(props) => (props.customStyle ? props.customStyle : null)}
+  ${mediaQuery.mobile(css`
+    font-size: 50px;
+  `)}
+  ${mediaQuery.mobile(css`
+    font-size: 70px;
+  `)}
 `;
 
 export const Section3 = () => {

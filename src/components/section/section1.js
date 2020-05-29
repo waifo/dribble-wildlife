@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-import { Image, Colors } from "../common";
+import { Image, Colors, mediaQuery } from "../common";
 import Flower from "../../images/flower.png";
 
 const SectionContainer = styled.div`
@@ -11,10 +11,19 @@ const SectionContainer = styled.div`
   margin: 100px 0px;
   justify-items: center;
   align-items: center;
+  ${mediaQuery.mobile(css`
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+    margin: 0px;
+  `)}
+  ${mediaQuery.tablet(css`
+    padding: 10px;
+  `)}
 `;
 
 const ImageContainer = styled.div`
-  height: 300px;
+  height: 100%;
 `;
 
 const ContentContainer = styled.div`
@@ -23,6 +32,10 @@ const ContentContainer = styled.div`
   div {
     font-size: 30px;
     line-height: 40px;
+    ${mediaQuery.mobile(css`
+      font-size: 22px;
+      line-height: 40px;
+    `)}
   }
 `;
 

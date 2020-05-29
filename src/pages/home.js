@@ -1,20 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 
-import Header from "../components/header";
 import Banner from "../components/banner";
+import { DesktopHeader, MobileHeader } from "../components/header";
 import { Section1, Section2, Section3 } from "../components/section";
 
 const HomeContainer = styled.div``;
 
-const Home = () => (
-  <HomeContainer>
-    <Header />
-    <Banner />
-    <Section1 />
-    <Section2 />
-    <Section3 />
-  </HomeContainer>
-);
+const Home = () => {
+  const isDesktop =
+    typeof window !== "undefined"
+      ? window.matchMedia("(min-width: 768px)").matches
+      : false;
+
+  return (
+    <HomeContainer>
+      {isDesktop ? <DesktopHeader /> : <MobileHeader />}
+      <Banner />
+      <Section1 />
+      <Section2 />
+      <Section3 />
+    </HomeContainer>
+  );
+};
 
 export default Home;

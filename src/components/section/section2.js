@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-import { Image, Colors } from "../common";
+import { Image, Colors, mediaQuery } from "../common";
 import Lion from "../../images/lion.png";
 
 const SectionContainer = styled.div`
@@ -11,6 +11,16 @@ const SectionContainer = styled.div`
   margin: 100px 0px;
   justify-items: center;
   align-items: center;
+  ${mediaQuery.mobile(css`
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-row-gap: 20px;
+    padding: 20px;
+    margin: 0px;
+  `)}
+  ${mediaQuery.tablet(css`
+    padding: 10px;
+  `)}
 `;
 
 const ImageContainer = styled.div`
@@ -24,6 +34,10 @@ const ContentContainer = styled.div`
   div {
     font-size: 18px;
     line-height: 30px;
+    ${mediaQuery.mobile(css`
+      font-size: 22px;
+      line-height: 40px;
+    `)}
   }
 `;
 
