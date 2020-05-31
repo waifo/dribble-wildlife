@@ -4,18 +4,12 @@ import styled, { css } from "styled-components";
 import { Section, Content, H3, Image, Colors, mediaQuery } from "../common";
 import Lion from "../../images/lion.png";
 
-const SectionContainer = styled(Section)`
-  ${mediaQuery.mobile(css`
-    grid-template-rows: 2fr 1fr;
-  `)}
-`;
-
 const ImageContainer = styled.div``;
 
 const ContentContainer = styled.div``;
 
 export const Section2 = () => (
-  <SectionContainer>
+  <Section>
     <ContentContainer>
       <H3 color={Colors.LIGHT_GREY}>About our Zooland</H3>
       <Content>
@@ -28,5 +22,5 @@ export const Section2 = () => (
     <ImageContainer>
       <Image src={Lion} />
     </ImageContainer>
-  </SectionContainer>
+  </Section>
 );
