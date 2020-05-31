@@ -15,7 +15,7 @@ const SectionContainer = styled.div`
     grid-template-rows: 1fr 1fr;
     padding: 20px;
     margin: 0px;
-    grid-gap: 0px;
+    grid-gap: 20px;
   `)}
 `;
 

@@ -6,3 +6,5 @@ export * from "./animation";
 export * from "./image";
 export * from "./mediaQuery";
 export * from "./icons";
+export * from "./heading";
+export * from "./containers";

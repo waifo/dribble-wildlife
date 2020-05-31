@@ -7,6 +7,7 @@ const Header = styled.header`
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
+  padding: 10px;
 `;
 const StyledText = styled.div`
   font-size: 28px;
@@ -19,7 +20,7 @@ const SideMenuContainer = styled.div`
   position: absolute;
   left: 0;
   width: 150px;
-  height: 300px;
+  height: 250px;
   background-color: ${Colors.BRIGHT_ORANGE};
   z-index: 10;
 `;

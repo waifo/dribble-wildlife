@@ -36,7 +36,6 @@ const TextLarge = styled.div`
 const TextSmall = styled.div`
   width: 60%;
   line-height: 24px;
-  color: ${Colors.LIGHT_GREY};
   margin: 40px 0px;
   ${mediaQuery.mobile(css`
     width: auto;

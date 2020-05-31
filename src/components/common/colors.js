@@ -9,4 +9,7 @@ export const Colors = {
   GREEN_WHITE: "#fdffcb",
   DARK_GREY: "#363c51",
   LIGHT_GREY: "#53535e",
+  LIGHT_YELLOW: "#fff9d9",
+  LIGHT_BLUE: "#d1ecf8",
+  LIGHT_PEACH: "#fee4dd",
 };

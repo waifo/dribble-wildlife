@@ -3,7 +3,13 @@ import styled from "styled-components";
 
 import Banner from "../components/banner";
 import { DesktopHeader, MobileHeader } from "../components/header";
-import { Section1, Section2, Section3 } from "../components/section";
+import {
+  Section1,
+  Section2,
+  Section3,
+  Section4,
+  Section5,
+} from "../components/section";
 
 const HomeContainer = styled.div``;
 
@@ -20,6 +26,8 @@ const Home = () => {
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section4 />
+      <Section5 />
     </HomeContainer>
   );
 };
