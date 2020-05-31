@@ -20,7 +20,7 @@ const SideMenuContainer = styled.div`
   font-size: 20px;
   position: absolute;
   left: 0;
-  width: 150px;
+  width: 200px;
   height: 400px;
   background-color: ${Colors.BRIGHT_ORANGE};
   z-index: 10;
