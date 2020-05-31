@@ -10,7 +10,7 @@ export const Section = styled.section`
   grid-gap: 20px;
   ${mediaQuery.mobile(css`
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-row-gap: 20px;
     padding: 20px;
     margin: 0px;
